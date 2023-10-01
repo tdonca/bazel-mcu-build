@@ -25,7 +25,7 @@ load("@bazel_tools//tools/cpp:unix_cc_toolchain_config.bzl", "cc_toolchain_confi
 cc_toolchain_config(
     name = "my_cc_toolchain_config",
     cpu = "arm",
-    compiler = "gcc"
+    compiler = "gcc",
     toolchain_identifier = "arm_none_eabi_darwin_arm64",
     host_system_name = "darwin_arm64", #???
     target_system_name = "arm-none-eabi",
@@ -39,7 +39,7 @@ cc_toolchain_config(
         "nm": "bin/arm-none-eabi-nm",
         "ld": "bin/arm-none-eabi-ld",
         "as": "bin/arm-none-eabi-as",
-        "objcopy": "bin/arm-none-eabi-objcopy"
+        "objcopy": "bin/arm-none-eabi-objcopy",
         "objdump": "bin/arm-none-eabi-objdump",
         "gcov": "bin/arm-none-eabi-gcov", #??? does not exist
         "strip": "bin/arm-none-eabi-strip",
@@ -51,7 +51,8 @@ cc_toolchain_config(
         "-isystem", "external/arm_gcc_darwin_arm64/arm-none-eabi/include",
         "-isystem", "external/arm_gcc_darwin_arm64/arm-none-eabi/libc/usr/include",
         "-isystem", "external/arm_gcc_darwin_arm64/lib/gcc/arm-none-eabi/12.3.1/include",
+        "--specs=nosys.specs",
     ],
-    link_flags = [],
+    link_flags = ["--specs=nosys.specs",],
 )
 

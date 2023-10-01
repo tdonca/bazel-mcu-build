@@ -9,4 +9,6 @@
 https://bazel.build/tutorials/ccp-toolchain-config  
 https://interrupt.memfault.com/blog/bazel-build-system-for-embedded-projects  
 https://asnaghi.me/post/embedded-bazel/  
+https://interrupt.memfault.com/blog/a-modern-c-dev-env  
+
 

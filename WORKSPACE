@@ -12,8 +12,8 @@ http_archive(
     name = "arm_gcc_darwin_arm64",
     urls = ["https://developer.arm.com/-/media/Files/downloads/gnu/12.3.rel1/binrel/arm-gnu-toolchain-12.3.rel1-darwin-arm64-arm-none-eabi.tar.xz"],
     strip_prefix = "arm-gnu-toolchain-12.3.rel1-darwin-arm64-arm-none-eabi",
-    sha256 = "c22a1b092d0d401291232d21e24cf986cbb534daf3233e46a9c0bad1a3d68740",
-    build_file = "//toolchain_arm_gcc/arm_gcc_darwin_arm64.BUILD",
+    sha256 = "3b2eee0bdf71c1bbeb3c3b7424fbf7bd9d5c3f0f5a3a4a78159c9e3ad219e7bd",
+    build_file = "//toolchain_arm_gcc:arm_gcc_darwin_arm64.BUILD",
 )
 
 # # Linux x86_64 host toolchain
